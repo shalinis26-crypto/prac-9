@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindBloom | Mental Health Counseling & Therapy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f3f7f4;
+      color: #263a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      gap: 28px;
+    }
+
+    header h1 {
+      color: #2f5d46;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    header p {
+      color: #5c7668;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    /* 1. Sliding Text Banner (slideAcross) */
+    .slider-box {
+      width: 100%;
+      max-width: 800px;
+      background-color: #dcebe2;
+      border-radius: 10px;
+      padding: 14px 0;
+      overflow: hidden;
+      border: 1px solid #b8d5c4;
+    }
+
+    .sliding-text {
+      display: inline-block;
+      white-space: nowrap;
+      font-weight: 600;
+      color: #1f4733;
+      animation-name: slideAcross;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+    }
+
+    @keyframes slideAcross {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(800px);
+      }
+    }
+
+    /* 2. Therapy Session Card (fadeUp) */
+    .card {
+      background: #ffffff;
+      max-width: 460px;
+      width: 100%;
+      padding: 26px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(47, 93, 70, 0.08);
+      text-align: center;
+      animation: fadeUp 1.2s ease-out forwards;
+    }
+
+    .card h2 {
+      color: #2f5d46;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      color: #52685c;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 3. Call-to-Action Button (pulse) */
+    .cta-btn {
+      background-color: #3d7a5b;
+      color: #ffffff;
+      border: none;
+      padding: 12px 26px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .cta-btn:hover {
+      background-color: #2e5f46;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.06);
+      }
+    }
+
+    /* 4. Therapist Matching Loader (spin) */
+    .loader-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: #52685c;
+      font-size: 0.95rem;
+    }
+
+    .loader {
+      width: 38px;
+      height: 38px;
+      border: 4px solid #cfe3d7;
+      border-top: 4px solid #3d7a5b;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 5. Accessibility: Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .sliding-text,
+      .card,
+      .cta-btn,
+      .loader {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MindBloom</h1>
+    <p>Compassionate Mental Health Counseling & Therapy Sessions</p>
+  </header>
+
+  <div class="slider-box">
+    <span class="sliding-text">
+      🌿 Healing starts with a single conversation • Confidential 1-on-1 Online & In-Person Therapy Sessions Available
+    </span>
+  </div>
+
+  <div class="card">
+    <h2>1-on-1 Mindfulness & Stress Therapy</h2>
+    <p>
+      Connect with licensed therapists in a safe, judgment-free space tailored to your emotional well-being.
+    </p>
+    <button class="cta-btn">Book a Therapy Session</button>
+  </div>
+
+  <div class="loader-section">
+    <div class="loader"></div>
+    <span>Matching you with a licensed counselor...</span>
+  </div>
+
+</body>
+</html>
